@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 My Notes</h1>
+        </header>
+
+        <div class="add-note-section">
+            <form id="noteForm">
+                <input type="hidden" id="noteId">
+                <div class="form-group">
+                    <input type="text" id="noteTitle" placeholder="Note title..." required>
+                </div>
+                <div class="form-group">
+                    <select id="noteCategory">
+                        <option value="General">General</option>
+                        <option value="Work">Work</option>
+                        <option value="Personal">Personal</option>
+                        <option value="Ideas">Ideas</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea id="noteContent" placeholder="Write your note here..." required></textarea>
+                </div>
+                <button type="submit" id="submitBtn">Add Note</button>
+                <button type="button" id="cancelBtn" style="display: none;">Cancel</button>
+            </form>
+        </div>
+
+        <div class="notes-section">
+            <div class="notes-header">
+                <h2>Your Notes</h2>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search notes...">
+                </div>
+            </div>
+            <div id="notesContainer" class="notes-grid">
+                <!-- Notes will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
