@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.App {
+    width: 100%;
+    max-width: 600px;
+    height: 80vh;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Join Screen */
+.join-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+}
+.join-container h1 {
+    margin-bottom: 2rem;
+}
+.join-container input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+    margin-bottom: 1rem;
+}
+.join-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Chat Container */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.chat-header {
+    background: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.messages-container {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+.message {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.message .username {
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    color: #555;
+}
+.message .message-text {
+    background: #e9e9eb;
+    padding: 10px 15px;
+    border-radius: 18px;
+    max-width: 70%;
+    word-wrap: break-word;
+    margin: 0;
+}
+
+/* My Messages */
+.message.my-message {
+    align-items: flex-end;
+}
+.message.my-message .message-text {
+    background: #007bff;
+    color: white;
+}
+
+/* Admin Messages */
+.message.admin-message {
+    align-items: center;
+}
+.message.admin-message .message-text {
+    background: transparent;
+    color: #888;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+.message.admin-message .username {
+    display: none;
+}
+
+
+/* Message Form */
+.message-form {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+.message-form input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.message-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
